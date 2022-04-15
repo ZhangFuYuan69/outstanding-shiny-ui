@@ -599,7 +599,7 @@ myTag <- div(class = "parent", span("Hey!"))
 # we create the tagRemoveChild function
 tagRemoveChild <- function(tag, n) {
   # check if the list is empty
-  if (length(tag$children) == 0) {
+  if (length(tag$children) >=  n) {
     stop(paste(tag$name, "does not have any children!"))
   }
   tag$children[n] <- NULL
